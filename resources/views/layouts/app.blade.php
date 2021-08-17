@@ -7,10 +7,20 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+<<<<<<< Updated upstream
+=======
+    @include("back.layout.extras.css")
+
+    <!-- Scripts -->
+    
+    <!-- Fonts -->
+  
+>>>>>>> Stashed changes
 </head>
 
 <body>
     <div id="app">
+<<<<<<< Updated upstream
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -68,9 +78,13 @@
         </nav>
 
         <main class="py-4">
+=======
+        <main >
+>>>>>>> Stashed changes
             @yield('content')
         </main>
     </div>
+    @include("back.layout.extras.js")
 </body>
 
 </html>
