@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'StyleScript';
+    src: url('../fonts/StyleScript-Regular.ttf');
+}
+
+.logo-text {
+    font-family: 'StyleScript' !important;
+    font-size: 1.4rem;
+}
+
+.flex-center {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.padding {
+    padding-bottom: 2rem;
+}
+
+.hide {
+    display: none !important;
+}
+
+body {
+    // main {
+    overflow-x: hidden !important;
+    // }
+}
