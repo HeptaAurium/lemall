@@ -1,3 +1,5 @@
+$lemall-orange:#FA971F;
+
 .banner {
     position: relative;
 
@@ -100,10 +102,58 @@
     }
 }
 
-@media (max-width: 578px){
-    .top-nav{
-        .profile{
+// registration
+.registration {
+    .card {
+        min-height: 80vh;
+        margin: 8vh auto;
+        border-radius: 12px;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 100%;
+            left: 0;
+            position: absolute;
+            padding: 10px;
+            background: $lemall-orange;
+            border-top-right-radius: 12px;
+            border-top-left-radius: 12px;
+
+        }
+
+        // &::after {
+        //     content: "";
+        //     width: 100%;
+        //     left: 0;
+        //     bottom: 0;
+        //     position: absolute;
+        //     padding: 10px;
+        //     background: $lemall-orange;
+        //     border-bottom-right-radius: 12px;
+        //     border-bottom-left-radius: 12px;
+        // }
+
+        .btn-sign-up{
+            background: $lemall-orange;
+            color: #fff;
+            margin: 12px auto;
+        }
+    }
+}
+
+
+@media (max-width: 578px) {
+    .top-nav {
+        .profile {
             width: 200px !important;
+        }
+    }
+
+    .registration {
+        .card {
+            min-height: 80vh;
+            margin: 7vh auto;
         }
     }
 }
