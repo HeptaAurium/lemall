@@ -27,3 +27,17 @@ body {
     overflow-x: hidden !important;
     // }
 }
+
+.flash-alert {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+    border: none !important;
+
+    .alert-success {
+        background: #38c172;
+        border-color: #38c172;
+        color: #fff;
+    }
+}
