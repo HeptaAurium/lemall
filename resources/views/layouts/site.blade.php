@@ -8,15 +8,19 @@
 
     <title> @yield('title') | {{ config('app.name', 'Laravel') }}</title>
     @include('front.layout.extras.css')
+
 </head>
 
 <body>
+    @include('flash::message')
+
     <main>
         @yield('content')
     </main>
     </div>
 
     @include('front.layout.extras.js')
+    @yield("js")
 </body>
 
 </html>

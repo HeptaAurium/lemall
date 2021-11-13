@@ -15,26 +15,12 @@ class CreateContactsTable extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
-            $table->integer('contact_type');
-            $table->integer('user_id');
+            $table->string('contact_type');
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('address')->nullable();
-            $table->enum('gender', ['male', 'female', 'other']);
+            $table->integer('user_id');
             $table->timestamps();
         });
-
-        Schema::create('contact_types', function(Blueprint $table){
-                       $table->string('id');
-            $table->enum('name', ['vendor', 'client', 'admin']);
-            $table->timestamps();
-        });
-
-        DB::table('contact_types')->insert([
-            ['id'=>'200','name'=>'vendor'],
-            ['id'=>'400','name'=>'client'],
-            ['id'=>'100','name'=>'admin']
-        ]);
     }
 
     /**

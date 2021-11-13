@@ -8,10 +8,12 @@
 
     <title>@section('title') | {{ config('app.name', 'Laravel') }}</title>
     @include("back.layout.extras.css")
- 
+
 </head>
 
 <body>
+    @include('flash::message')
+
     <div id="app">
         <main >
             @yield('content')

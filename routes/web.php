@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,6 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'default']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::post("register", [UsersController::class, 'store']);
+// Route::view("auth.register", "register");
