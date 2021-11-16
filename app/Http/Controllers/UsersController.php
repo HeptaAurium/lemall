@@ -6,7 +6,10 @@ use App\Models\Contact;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 
 class UsersController extends Controller
 {
@@ -52,21 +55,31 @@ class UsersController extends Controller
             return back();
         }
 
-        $user = new User;
-        $user->name  = $request->name;
-        $user->email = $request->email;
-        $user->phone = $request->phone;
-        $user->password = Hash::make($request->password);
-        $user->save();
-        $user_id= $user->id;
+        try {
+            //code...
+            $user = new User;
+            $user->name  = $request->name;
+            $user->email = $request->email;
+            $user->phone = $request->phone;
+            $user->password = Hash::make($request->password);
+            $user->save();
+            $user_id = $user->id;
+            $client = User::find($user_id);
+            $client->assignRole('client');
 
-        $contact = new Contact();
-        $contact->first_name =$request->first_name;
-        $contact->last_name =$request->last_name;
-        $contact->user_id= $user_id;
-        $contact->contact_type= "client";
-        $contact->save();
-
+            $contact = new Contact();
+            $contact->first_name = $request->first_name;
+            $contact->last_name = $request->last_name;
+            $contact->user_id = $user_id;
+            $contact->contact_type = "client";
+            $contact->save();
+            flash('Account created successfully! Kindly log in!')->success();
+            return view('auth.login');
+        } catch (\Throwable $th) {
+            Log::error($th);
+            flash("Something went wrong! Check your inputs and try again!")->error();
+            return back();
+        }
     }
 
     /**

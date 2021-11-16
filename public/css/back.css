@@ -1,0 +1,172 @@
+body {
+  background: #ddd;
+}
+
+.sidebar {
+  background: #f7f7f7;
+  height: 98vh;
+  width: 280px;
+  position: fixed;
+  left: 4px;
+  top: 1vh;
+  bottom: 1vh;
+  border-radius: 12px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.sidebar .sidebar-toggler {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 22px;
+}
+
+.sidebar .top {
+  height: 140px;
+}
+
+.sidebar .top .logo-text {
+  width: 100px;
+  height: 100px;
+  background: #1e1e1e;
+  border-radius: 50%;
+  margin: 10px auto;
+}
+
+.sidebar .top::after {
+  content: "";
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  border-bottom: 1px solid #999;
+}
+
+.sidebar .sidebar-hr {
+  border-top: 1px solid #1e1e1e;
+}
+
+.sidebar .vertical-nav .nav-item {
+  padding: 8px 0 8px 4px;
+  cursor: pointer;
+}
+
+.sidebar .vertical-nav .nav-item h6 {
+  font-size: 12px;
+}
+
+.sidebar .vertical-nav .nav-item .nav-link {
+  text-decoration: none;
+  color: #444 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  font-weight: 800;
+  margin-left: 12px;
+}
+
+.sidebar .vertical-nav .nav-item .nav-link .icon {
+  background: #fff;
+  width: 2.6rem !important;
+  height: 2.6rem !important;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #555 !important;
+  margin-right: 12px;
+}
+
+.sidebar .vertical-nav ul.drop {
+  padding-left: 2rem;
+  background: #ddd;
+  width: 80%;
+  margin: 0 auto;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.sidebar .vertical-nav ul.drop li,
+.sidebar .vertical-nav ul.drop a,
+.sidebar .vertical-nav ul.drop i {
+  font-size: 12px !important;
+}
+
+.sidebar .vertical-nav ul.drop .nav-link {
+  position: relative;
+  margin: 10px 0;
+}
+
+.sidebar .vertical-nav ul.drop .nav-link .badge {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  border-radius: 50%;
+  height: 1.3rem;
+  width: 1.3 rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app {
+  position: relative;
+  width: calc(100% - 291px);
+  left: 290px !important;
+  right: 1px;
+  min-height: 98vh;
+  top: 1vh;
+}
+
+.app .top-nav {
+  background: #f7f7f7;
+  color: #111;
+  border-radius: 12px;
+}
+
+.app .top-nav .sidebar-toggler {
+  font-size: 24px;
+}
+
+@media (max-width: 990px) {
+  .sidebar {
+    left: -300px;
+    z-index: 9999;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .sidebar.show {
+    left: 0 !important;
+  }
+  .app {
+    width: 100% !important;
+    left: 1px !important;
+    top: 0 !important;
+  }
+  .app .top-nav {
+    border-radius: 0 !important;
+  }
+}
+/*# sourceMappingURL=back.css.map */

@@ -5,17 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>@section('title') | {{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title') | {{ config('app.name', 'Laravel') }}</title>
     @include("back.layout.extras.css")
-
 </head>
 
 <body>
     @include('flash::message')
-
-    <div id="app">
-        <main >
+    @include('back.layout.navs.sidebar')
+    <div id="app" class="app">
+        @include('back.layout.navs.topbar')
+        <main>
             @yield('content')
         </main>
     </div>
