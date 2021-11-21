@@ -1,4 +1,4 @@
-$lemall-orange:#FA971F;
+$lemall-orange: #fa971f;
 
 .banner {
     position: relative;
@@ -24,13 +24,11 @@ $lemall-orange:#FA971F;
             width: 9px;
             border-radius: 50%;
             top: 10px;
-
         }
     }
 
     span.banner-holders.first {
         left: 20%;
-
     }
 
     span.banner-holders.last {
@@ -67,7 +65,6 @@ $lemall-orange:#FA971F;
             border-radius: 50%;
             font-size: 9px;
         }
-
     }
 
     .top-nav-icons {
@@ -119,7 +116,6 @@ $lemall-orange:#FA971F;
             background: $lemall-orange;
             border-top-right-radius: 12px;
             border-top-left-radius: 12px;
-
         }
 
         .btn-sign-up {
@@ -130,7 +126,224 @@ $lemall-orange:#FA971F;
     }
 }
 
+.showcase-universal {
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0;
+    top: 0;
 
+    .scroll-buttons {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+
+        button {
+            position: absolute;
+            top: 45%;
+            width: 7rem;
+            width: 7rem;
+            transition: 0.5s;
+
+            .fa {
+                font-size: 5rem;
+                color: #fff;
+            }
+        }
+
+        .btnNext {
+            right: 10px;
+        }
+
+        .btnPrev {
+            left: 10px;
+        }
+
+        button:hover {
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            background: rgba($color: #f9f9f9, $alpha: 0.3);
+        }
+    }
+
+    .indicators {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        width: 100%;
+        overflow-x: hidden;
+        height: 120px;
+
+        ol {
+            justify-content: flex-end;
+            overflow-x: hidden;
+        }
+
+        .li-indicator {
+            width: 300px;
+            height: 80px;
+            background: #ddd;
+            border-radius: 10px;
+            box-shadow: 2px 2px 3px 3px#ddd;
+            color: #111;
+            align-items: center;
+            margin: auto 10px;
+            overflow: hidden;
+
+            img {
+                height: 80px;
+                width: auto;
+            }
+
+            h3 {
+                font-size: 16px;
+                color: #111;
+                padding: 5px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .one {
+        background: #020005
+            url("../img/front/imani-bahati-LxVxPA1LOVM-unsplash\ \(1\).jpg")
+            no-repeat center center;
+    }
+
+    .two {
+        background: #020005
+            url("../img/front/icons8-team-seDjj4dmC9s-unsplash.jpg") no-repeat
+            center center;
+    }
+
+    .showcase-outer {
+        background-size: cover;
+        background-attachment: scroll;
+        height: 100%;
+        overflow: hidden;
+        display: none;
+
+        .showcase {
+            background: rgba(0, 0, 0, 0.4);
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+
+            .content {
+                position: relative;
+                top: 30%;
+                left: 20%;
+                height: 100%;
+                z-index: 1000;
+
+                h1.non-display {
+                    font-size: 12px;
+                    font-weight: bold;
+                    font-family: "Redressed", cursive;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+
+                a.btn {
+                    background: orangered;
+                    border-radius: 20px;
+                    margin-top: 50px;
+                    padding: 12px;
+                    color: #fff;
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    .showcase-outer.active {
+        display: block;
+    }
+}
+
+.welcome-nav {
+    padding: 0.9rem 1rem 0.4rem;
+    width: 100%;
+    z-index: 1000 !important;
+
+    a.btn.circle {
+        border: 2px solid #f9f9f9;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .fa,
+    .fab {
+        font-size: 1rem;
+        color: #fff;
+    }
+
+    a.btn.right {
+        .fa,
+        .fab {
+            font-size: 2rem;
+        }
+    }
+
+    .nav-2 {
+        .nav-link {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2rem;
+
+            &:hover {
+                &::after {
+                    content: "";
+                    width: 100%;
+                    border-bottom: 2px solid #fff;
+                    padding: 4px;
+                    display: block;
+                    position: relative;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .showcase-outer {
+        .showcase {
+            .content {
+                position: relative;
+                top: 30%;
+                left: 50px !important;
+
+                h1.non-display {
+                    font-size: 8px;
+                    font-weight: bold;
+                    font-family: "Redressed", cursive;
+                }
+
+                .display {
+                    font-size: 2.4rem;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+
+                button {
+                    .btnNext {
+                        right: 0 !important;
+                    }
+
+                    .btnPrev {
+                        left: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+}
 @media (max-width: 578px) {
     .top-nav {
         .profile {
@@ -142,6 +355,108 @@ $lemall-orange:#FA971F;
         .card {
             min-height: 80vh;
             margin: 7vh auto;
+        }
+    }
+
+    .showcase-universal {
+        .scroll-buttons {
+            button {
+                top: 45%;
+                width: 5rem;
+                width: 4rem;
+
+                .fa {
+                    font-size: 3rem;
+                    color: #fff;
+                }
+            }
+
+            .btnNext {
+                right: 0;
+            }
+
+            .btnPrev {
+                left: 0;
+            }
+        }
+
+        .showcase-outer {
+            .showcase {
+                .content {
+                    position: relative;
+                    top: 10%;
+                    left: 10px !important;
+
+                    h1.non-display {
+                        font-size: 8px;
+                        font-weight: bold;
+                        font-family: "Redressed", cursive;
+                    }
+
+                    .display {
+                        font-size: 2.4rem;
+                    }
+
+                    p {
+                        font-size: 14px !important;
+                    }
+
+                    button {
+                        border-radius: 14px !important;
+                        width: 200px !important;
+                        margin-top: 70px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .welcome-nav {
+        padding: 0.4rem 0.5rem;
+        z-index: 100000000 !important;
+
+        a.btn.circle {
+            border: 2px solid #f9f9f9;
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .fa,
+        .fab {
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        a.btn.right {
+            .fa,
+            .fab {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .welcome-nav {
+        padding: 0.3rem 0;
+
+        a.btn.circle {
+            border: 1px solid #f9f9f9;
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+
+        .fa,
+        .fab {
+            font-size: 0.6rem;
+            color: #fff;
+        }
+
+        a.btn.right {
+            .fa,
+            .fab {
+                font-size: 0.8rem;
+            }
         }
     }
 }

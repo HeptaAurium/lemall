@@ -119,15 +119,219 @@
   left: 0;
   position: absolute;
   padding: 10px;
-  background: #FA971F;
+  background: #fa971f;
   border-top-right-radius: 12px;
   border-top-left-radius: 12px;
 }
 
 .registration .card .btn-sign-up {
-  background: #FA971F;
+  background: #fa971f;
   color: #fff;
   margin: 12px auto;
+}
+
+.showcase-universal {
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  top: 0;
+}
+
+.showcase-universal .scroll-buttons {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.showcase-universal .scroll-buttons button {
+  position: absolute;
+  top: 45%;
+  width: 7rem;
+  width: 7rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.showcase-universal .scroll-buttons button .fa {
+  font-size: 5rem;
+  color: #fff;
+}
+
+.showcase-universal .scroll-buttons .btnNext {
+  right: 10px;
+}
+
+.showcase-universal .scroll-buttons .btnPrev {
+  left: 10px;
+}
+
+.showcase-universal .scroll-buttons button:hover {
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background: rgba(249, 249, 249, 0.3);
+}
+
+.showcase-universal .indicators {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 100%;
+  overflow-x: hidden;
+  height: 120px;
+}
+
+.showcase-universal .indicators ol {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  overflow-x: hidden;
+}
+
+.showcase-universal .indicators .li-indicator {
+  width: 300px;
+  height: 80px;
+  background: #ddd;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 3px 3px #ddd;
+          box-shadow: 2px 2px 3px 3px #ddd;
+  color: #111;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto 10px;
+  overflow: hidden;
+}
+
+.showcase-universal .indicators .li-indicator img {
+  height: 80px;
+  width: auto;
+}
+
+.showcase-universal .indicators .li-indicator h3 {
+  font-size: 16px;
+  color: #111;
+  padding: 5px;
+  font-weight: 600;
+}
+
+.showcase-universal .one {
+  background: #020005 url("../img/front/imani-bahati-LxVxPA1LOVM-unsplash (1).jpg") no-repeat center center;
+}
+
+.showcase-universal .two {
+  background: #020005 url("../img/front/icons8-team-seDjj4dmC9s-unsplash.jpg") no-repeat center center;
+}
+
+.showcase-universal .showcase-outer {
+  background-size: cover;
+  background-attachment: scroll;
+  height: 100%;
+  overflow: hidden;
+  display: none;
+}
+
+.showcase-universal .showcase-outer .showcase {
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.showcase-universal .showcase-outer .showcase .content {
+  position: relative;
+  top: 30%;
+  left: 20%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.showcase-universal .showcase-outer .showcase .content h1.non-display {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Redressed", cursive;
+}
+
+.showcase-universal .showcase-outer .showcase .content p {
+  font-size: 16px;
+}
+
+.showcase-universal .showcase-outer .showcase .content a.btn {
+  background: orangered;
+  border-radius: 20px;
+  margin-top: 50px;
+  padding: 12px;
+  color: #fff;
+  width: 50%;
+}
+
+.showcase-universal .showcase-outer.active {
+  display: block;
+}
+
+.welcome-nav {
+  padding: 0.9rem 1rem 0.4rem;
+  width: 100%;
+  z-index: 1000 !important;
+}
+
+.welcome-nav a.btn.circle {
+  border: 2px solid #f9f9f9;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.welcome-nav .fa,
+.welcome-nav .fab {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.welcome-nav a.btn.right .fa,
+.welcome-nav a.btn.right .fab {
+  font-size: 2rem;
+}
+
+.welcome-nav .nav-2 .nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.welcome-nav .nav-2 .nav-link:hover::after {
+  content: "";
+  width: 100%;
+  border-bottom: 2px solid #fff;
+  padding: 4px;
+  display: block;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .showcase-outer .showcase .content {
+    position: relative;
+    top: 30%;
+    left: 50px !important;
+  }
+  .showcase-outer .showcase .content h1.non-display {
+    font-size: 8px;
+    font-weight: bold;
+    font-family: "Redressed", cursive;
+  }
+  .showcase-outer .showcase .content .display {
+    font-size: 2.4rem;
+  }
+  .showcase-outer .showcase .content p {
+    font-size: 16px;
+  }
+  .showcase-outer .showcase .content button .btnNext {
+    right: 0 !important;
+  }
+  .showcase-outer .showcase .content button .btnPrev {
+    left: 0 !important;
+  }
 }
 
 @media (max-width: 578px) {
@@ -137,6 +341,80 @@
   .registration .card {
     min-height: 80vh;
     margin: 7vh auto;
+  }
+  .showcase-universal .scroll-buttons button {
+    top: 45%;
+    width: 5rem;
+    width: 4rem;
+  }
+  .showcase-universal .scroll-buttons button .fa {
+    font-size: 3rem;
+    color: #fff;
+  }
+  .showcase-universal .scroll-buttons .btnNext {
+    right: 0;
+  }
+  .showcase-universal .scroll-buttons .btnPrev {
+    left: 0;
+  }
+  .showcase-universal .showcase-outer .showcase .content {
+    position: relative;
+    top: 10%;
+    left: 10px !important;
+  }
+  .showcase-universal .showcase-outer .showcase .content h1.non-display {
+    font-size: 8px;
+    font-weight: bold;
+    font-family: "Redressed", cursive;
+  }
+  .showcase-universal .showcase-outer .showcase .content .display {
+    font-size: 2.4rem;
+  }
+  .showcase-universal .showcase-outer .showcase .content p {
+    font-size: 14px !important;
+  }
+  .showcase-universal .showcase-outer .showcase .content button {
+    border-radius: 14px !important;
+    width: 200px !important;
+    margin-top: 70px !important;
+  }
+  .welcome-nav {
+    padding: 0.4rem 0.5rem;
+    z-index: 100000000 !important;
+  }
+  .welcome-nav a.btn.circle {
+    border: 2px solid #f9f9f9;
+    width: 2rem;
+    height: 2rem;
+  }
+  .welcome-nav .fa,
+  .welcome-nav .fab {
+    font-size: 1rem;
+    color: #fff;
+  }
+  .welcome-nav a.btn.right .fa,
+  .welcome-nav a.btn.right .fab {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .welcome-nav {
+    padding: 0.3rem 0;
+  }
+  .welcome-nav a.btn.circle {
+    border: 1px solid #f9f9f9;
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  .welcome-nav .fa,
+  .welcome-nav .fab {
+    font-size: 0.6rem;
+    color: #fff;
+  }
+  .welcome-nav a.btn.right .fa,
+  .welcome-nav a.btn.right .fab {
+    font-size: 0.8rem;
   }
 }
 /*# sourceMappingURL=front.css.map */
